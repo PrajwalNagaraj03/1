@@ -8,7 +8,8 @@ class StringCalculatorTest {
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+		StringCalculator calculator = new StringCalculator();
+		assertEquals(3, calculator.add("1,2"));
 	}
 
 }
