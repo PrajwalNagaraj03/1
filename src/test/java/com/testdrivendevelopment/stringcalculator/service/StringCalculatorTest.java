@@ -43,5 +43,14 @@ class StringCalculatorTest {
 	void handleNewDelimeters() {
 		assertEquals(3, StringCalculator.add("//;\\n1;2"));
 	}
-
+	
+	@Test
+	void customDelimeters() {
+		assertEquals(27, StringCalculator.add("//;\\n1;2;3;5;7;9"));
+	}
+	
+	@Test
+	void negativeNumbers() {
+		
+	}
 }

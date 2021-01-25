@@ -5,8 +5,6 @@ public class StringCalculator {
 	public static Integer add(String input) {
 		String delimeter = ",|\n";
 		
-		String numberWithoutNewDelimeter = new String(input);
-		
 		if(input == null) {
 			return null;
 		}
@@ -14,6 +12,8 @@ public class StringCalculator {
 		if(" ".equals(input) || "".equals(input)) {
 			return 0;
 		}
+		
+		String numberWithoutNewDelimeter = new String(input);
 		
 		if(input.startsWith("//")) {
 			int indexOfDelimeter = input.indexOf("//") + 2;
