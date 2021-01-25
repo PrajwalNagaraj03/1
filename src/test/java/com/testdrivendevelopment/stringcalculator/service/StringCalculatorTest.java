@@ -21,5 +21,17 @@ class StringCalculatorTest {
 	void nullCheck() {
 		assertNull(StringCalculator.add(null));
 	}
+	
+	@Test
+	void checkOneNumber() {
+		assertEquals(9, StringCalculator.add("9"));
+	}
+	
+	@Test
+	void simpleInputs() {
+		assertEquals(6, StringCalculator.add("1,2,3"));
+		//assertEquals(9, StringCalculator.add("//;\\n1,2,3"));
+		//assertEquals(9, StringCalculator.add("-11,-2,3"));
+	}
 
 }
