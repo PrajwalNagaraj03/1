@@ -8,8 +8,18 @@ class StringCalculatorTest {
 
 	@Test
 	void test() {
-		StringCalculator calculator = new StringCalculator();
-		assertEquals(3, calculator.add("1,2"));
+		//StringCalculator calculator = new StringCalculator();
+		assertEquals(3, StringCalculator.add("1,2"));
+	}
+	
+	@Test
+	void emptyCheck() {
+		assertEquals(0, StringCalculator.add(" "));
+	}
+	
+	@Test
+	void nullCheck() {
+		assertNull(StringCalculator.add(null));
 	}
 
 }
