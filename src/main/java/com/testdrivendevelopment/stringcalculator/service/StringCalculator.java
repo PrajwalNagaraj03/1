@@ -18,7 +18,7 @@ public class StringCalculator {
 		if(input.startsWith("//")) {
 			int indexOfDelimeter = input.indexOf("//") + 2;
 			//delimeter = ; position 3
-			delimeter = input.substring(indexOfDelimeter +1);
+			delimeter = input.substring(indexOfDelimeter, indexOfDelimeter+1);
 			numberWithoutNewDelimeter = input.substring(input.indexOf("n")+1);
 		}
 		
@@ -26,7 +26,7 @@ public class StringCalculator {
 		int sum = 0;
 		for (String number : numbers) {
 			if(number != null && !number.trim().isEmpty()) {
-				sum = sum+Integer.valueOf(number.trim());
+				sum = sum + Integer.valueOf(number.trim());
 			}
 		}
 		return sum;
