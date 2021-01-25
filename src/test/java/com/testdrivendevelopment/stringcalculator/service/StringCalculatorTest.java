@@ -66,4 +66,9 @@ class StringCalculatorTest {
 			assertEquals("Letters are not allowed", e.getMessage());
 		}
 	}
+	
+	@Test
+	void invokeCountMethod() {
+		StringCalculator.noOfTimesMethodInvoked();
+	}
 }

@@ -5,7 +5,10 @@ import java.util.List;
 
 public class StringCalculator {
 
+	public static int count = 0;
+	
 	public static Integer add(String input) {
+		
 		String delimeter = ",|\n";
 
 		if (input == null) {
@@ -30,6 +33,9 @@ public class StringCalculator {
 	}
 
 	private static Integer addNumbers(String[] numbers) {
+		
+		count++;
+		
 		int sum = 0;
 		
 		List<String> negativeNumbers = new ArrayList<>();
@@ -58,4 +64,7 @@ public class StringCalculator {
 		return sum;
 	}
 
+	public static int noOfTimesMethodInvoked() {
+		return count;
+	}
 }
