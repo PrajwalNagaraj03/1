@@ -51,6 +51,19 @@ class StringCalculatorTest {
 	
 	@Test
 	void negativeNumbers() {
-		
+		try {
+			StringCalculator.add("-1,-3,3");
+		} catch(IllegalArgumentException e) {
+			assertEquals("Negative Numbers are not allowed -1,-3", e.getMessage());
+		}
+	}
+	
+	@Test
+	void testWithLetters() {
+		try {
+			StringCalculator.add("a,b,c");
+		} catch(NumberFormatException e) {
+			assertEquals("Letters are not allowed", e.getMessage());
+		}
 	}
 }
